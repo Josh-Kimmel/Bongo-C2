@@ -1,0 +1,13 @@
+{
+    "server_data":
+    {
+        "initialized": false,
+        "stikked_address": "https://example.com/stikked/",
+        "server_username": "bongo"
+    },
+
+    "sessions":
+    [
+
+    ]
+}
