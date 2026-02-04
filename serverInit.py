@@ -2,7 +2,7 @@
 import json
 
 #reads in json server config file
-def readJson(configFileName):
+def readSettings(configFileName):
     try:
         with open(configFileName, mode = "rt") as configFile:
             configJson = json.load(configFile)
@@ -52,7 +52,7 @@ def _initSettings(configJson):
         exit
 
 #writes initialized values back to json server config file
-def writeJson(configFileName, configJson):
+def writeSettings(configFileName, configJson):
     try:
         with open(configFileName, "wt") as configFile:
 
@@ -71,11 +71,10 @@ def writeJson(configFileName, configJson):
 
 
 
-#main
-serverConfigFile = "serverConfig.json"
+def initialize():
+    serverConfigFile = "serverConfig.json"
 
-
-print("Initializing server.\n")
-configJson = readJson(serverConfigFile)
-newConfigJson = initSettings(configJson)
-writeJson(serverConfigFile, newConfigJson)
+    print("Initializing server.\n")
+    configJson = readSettings(serverConfigFile)
+    newConfigJson = _initSettings(configJson)
+    writeSettings(serverConfigFile, newConfigJson)
