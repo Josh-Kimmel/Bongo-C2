@@ -1,10 +1,10 @@
-from serverSettings import *
-from serverUtils import *
+from src.serverSettings import *
+from src.serverFunctions import *
 #may need to rearagne/delete below dependencies
-from serverInterface import *
+from src.serverInterface import *
 
+splashScreen()
 #load()
-clearScreen()
-homeScreen()
+home()
 #while(True):
 #   pass
