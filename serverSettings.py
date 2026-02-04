@@ -4,7 +4,7 @@ import json
 import os
 
 #reads in json server config file
-def readSettings():
+def readConfig():
     load_dotenv()
     configFileName = os.getenv("serverConfigFile")
     
@@ -57,7 +57,7 @@ def _initSettings(configJson):
         exit
 
 #writes initialized values back to json server config file
-def writeSettings(configJson):
+def writeConfig(configJson):
     load_dotenv()
     configFileName = os.getenv("serverConfigFile")
     
@@ -81,6 +81,6 @@ def writeSettings(configJson):
 
 def initialize():
     print("Initializing server.\n")
-    configJson = readSettings()
+    configJson = readConfig()
     newConfigJson = _initSettings(configJson)
-    writeSettings(newConfigJson)
+    writeConfig(newConfigJson)
