@@ -2,41 +2,17 @@
     "server_data":
     {
         "initialized": false,
-        "stikked_address": "https://example.com/stikked/",
-        "server_username": "bongo"
+        "stikked_address": "https://example.com/stikked",
+        "server_username": "server"
     },
 
-    "listeners":
-<<<<<<< HEAD
-=======
+    "sessions":
     [
 
     ],
 
     "files":
->>>>>>> 94e96e9b81c47ddbd375a760f9e2de4f5de5b9e3
     [
-        {
-            "id": "d445734f",
-            
-            "comment": "something"
-        }
-    ],
 
-    "files":
-    [
-        {
-            "name": "something.exe",
-            "id": "357ab32f",
-            "comment": "something else"
-
-        },
-
-        {
-            "name": "something.py",
-            "id": "35asdqasdd",
-            "comment": "something thirdsaddddddddddddddddddddd"
-
-        }
     ]
 }
