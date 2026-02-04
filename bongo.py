@@ -1,0 +1,3 @@
+from serverSettings import *
+
+readSettings()

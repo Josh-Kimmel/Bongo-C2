@@ -1,8 +1,13 @@
 #! /bin/python3
+from dotenv import load_dotenv
 import json
+import os
 
 #reads in json server config file
-def readSettings(configFileName):
+def readSettings():
+    load_dotenv()
+    configFileName = os.getenv("serverConfigFile")
+    
     try:
         with open(configFileName, mode = "rt") as configFile:
             configJson = json.load(configFile)
@@ -52,7 +57,10 @@ def _initSettings(configJson):
         exit
 
 #writes initialized values back to json server config file
-def writeSettings(configFileName, configJson):
+def writeSettings(configJson):
+    load_dotenv()
+    configFileName = os.getenv("serverConfigFile")
+    
     try:
         with open(configFileName, "wt") as configFile:
 
@@ -72,9 +80,7 @@ def writeSettings(configFileName, configJson):
 
 
 def initialize():
-    serverConfigFile = "serverConfig.json"
-
     print("Initializing server.\n")
-    configJson = readSettings(serverConfigFile)
+    configJson = readSettings()
     newConfigJson = _initSettings(configJson)
-    writeSettings(serverConfigFile, newConfigJson)
+    writeSettings(newConfigJson)
