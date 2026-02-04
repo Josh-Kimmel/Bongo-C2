@@ -1,17 +1,19 @@
 from src.serverSettings import *
+from src.listeners import *
 from src.serverInterface import *
 
-def load():
+def getSettingByName(targetName):
+    settingsList = getSettings()
+    return settingsList[targetName]
 
-    splashScreen()
-    
-    config = readConfig()
-    if(not config["server_data"]["initialized"]):
-        initialize()
+def getSettings():
+    settingsList = readConfig()["server_data"]
+    return settingsList
 
-def home():
+def home(reminderText=""):
 
     homeScreen()
+    print(reminderText)
     selection = input("Option: ")
     clearScreen()
     
@@ -21,27 +23,66 @@ def home():
             home()
 
         case "1":
-            #viewSettings()
+            viewSettings()
             home()
         
         case "2":
-            #viewSessions()
+            viewListeners()
             home()
 
         case "3":
-            #createListener
+            #viewFiles()
             home()
 
         case "4":
-            #sendCommands
+            #createListener
             home()
 
         case "5":
-            pass
+            #postFile()
             home()
 
         case "6":
+            #sendCommands
+            home()
+
+        case "7":
+            pass
+            home()
+
+        case "8":
             exit
 
         case _:
-            home()
+            home("Please enter a number selection.")
+
+
+def load():
+
+    splashScreen()
+    
+    config = readConfig()
+    if(not config["server_data"]["initialized"]):
+        initialize()
+
+
+def viewSettings():
+    settingsList = getSettings()
+
+    for setting in settingsList.keys():
+        print(setting + " : " + str(settingsList[setting]))
+
+    print("\n\n")
+    waitToContinue()
+    clearScreen()
+
+def viewListeners():
+    listenersList = getListeners()
+
+    displayList(listenersList)
+    waitToContinue()
+    clearScreen()
+
+
+def waitToContinue():
+    input("Press [Enter] to continue:")
