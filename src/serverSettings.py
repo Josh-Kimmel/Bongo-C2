@@ -3,6 +3,13 @@ from dotenv import load_dotenv
 import json
 import os
 
+def getSettingByName(targetName):
+    settingsList = getSettings()
+    return settingsList[targetName]
+
+def getSettings():
+    settingsList = readConfig()["server_data"]
+    return settingsList
 
 #initializes server settings 
 def initialize():

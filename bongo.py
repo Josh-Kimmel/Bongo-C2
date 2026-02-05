@@ -4,7 +4,8 @@ from src.files import *
 #may need to rearagne/delete below dependencies
 from src.serverInterface import *
 
-splashScreen()
-#load()
+
+load()
 home()
+
 

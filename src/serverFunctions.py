@@ -1,14 +1,9 @@
 from src.serverSettings import *
 from src.listeners import *
 from src.serverInterface import *
+from src.files import *
 
-def getSettingByName(targetName):
-    settingsList = getSettings()
-    return settingsList[targetName]
 
-def getSettings():
-    settingsList = readConfig()["server_data"]
-    return settingsList
 
 def home(reminderText=""):
 
@@ -31,7 +26,7 @@ def home(reminderText=""):
             home()
 
         case "3":
-            #viewFiles()
+            viewFiles()
             home()
 
         case "4":
@@ -65,21 +60,21 @@ def load():
     if(not config["server_data"]["initialized"]):
         initialize()
 
-
-def viewSettings():
-    settingsList = getSettings()
-
-    for setting in settingsList.keys():
-        print(setting + " : " + str(settingsList[setting]))
-
-    print("\n\n")
+def viewFiles():
+    filesList = getFiles()
+    displayList(filesList)
     waitToContinue()
     clearScreen()
 
 def viewListeners():
     listenersList = getListeners()
-
     displayList(listenersList)
+    waitToContinue()
+    clearScreen()
+
+def viewSettings():
+    settingsDictionary = getSettings()
+    displayDictionary(settingsDictionary)
     waitToContinue()
     clearScreen()
 
