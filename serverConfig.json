@@ -2,19 +2,11 @@
     "server_data":
     {
         "initialized": false,
-        "stikked_address": "https://example.com/stikked",
-        "server_username": "server"
+        "stikked_address": "https://example.com/stikked/",
+        "server_username": "bongo"
     },
 
     "listeners":
-<<<<<<< HEAD
-=======
-    [
-
-    ],
-
-    "files":
->>>>>>> 94e96e9b81c47ddbd375a760f9e2de4f5de5b9e3
     [
         {
             "id": "d445734f",
