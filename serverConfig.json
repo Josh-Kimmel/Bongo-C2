@@ -13,27 +13,7 @@
 
     "files":
     [
-        {
-            "id": "d445734f",
-            
-            "comment": "something"
-        }
+
     ],
 
-    "files":
-    [
-        {
-            "name": "something.exe",
-            "id": "357ab32f",
-            "comment": "something else"
-
-        },
-
-        {
-            "name": "something.py",
-            "id": "35asdqasdd",
-            "comment": "something thirdsaddddddddddddddddddddd"
-
-        }
-    ]
 }
