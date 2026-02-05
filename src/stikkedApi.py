@@ -1,5 +1,5 @@
 import requests
-from serverSettings import *
+from src.serverSettings import *
 
 def getPostByID(id):
     url = getUrl("/api/paste/" + id)

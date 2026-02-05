@@ -1,5 +1,5 @@
 #! /bin/python3
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import json
 import os
 
@@ -54,6 +54,7 @@ def _initSettings(configJson):
 #reads in json server config file
 def readConfig():
     load_dotenv()
+    load_dotenv(find_dotenv(usecwd = True))
     configFileName = os.getenv("serverConfigFile")
     
     try:
@@ -75,6 +76,7 @@ def readConfig():
 #writes initialized values back to json server config file
 def writeConfig(configJson):
     load_dotenv()
+    load_dotenv(find_dotenv(usecwd = True))
     configFileName = os.getenv("serverConfigFile")
     
     try:

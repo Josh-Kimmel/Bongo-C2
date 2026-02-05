@@ -1,3 +1,4 @@
+#! /bin/python
 from src.serverSettings import *
 from src.serverFunctions import *
 from src.files import *

@@ -92,7 +92,7 @@ def homeScreen():
 
 def splashScreen():
     
-    splashText = """
+    splashText = r"""
 
  ----------------------------------------------------
 
