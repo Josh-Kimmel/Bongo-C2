@@ -11,13 +11,14 @@ def getUrl(path):
     
     return stikked_address + path
 
-def makePost(content):
+def makePost(content, title=""):
     url = getUrl("/api/create")
     payload = {
         "private": 1,
-        "name": getSettingByName("server_username"), 
+        "name": getSettingByName("server_username"),
+        "title": title,
         "text": str(content), 
-        "expire": 5
+        "expire": 5 #delete while not testing
     }
    
     return requests.post(url, payload)

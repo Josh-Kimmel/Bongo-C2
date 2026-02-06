@@ -30,15 +30,21 @@ def home(reminderText=""):
             home()
 
         case "4":
-            #createListener
+            postListener()
+            waitToContinue()
+            clearScreen()
             home()
 
         case "5":
-            #postFile()
+            postFile()
+            waitToContinue()
+            clearScreen()
             home()
 
         case "6":
-            #sendCommands
+            #sendCommands()
+            waitToContinue()
+            clearScreen()
             home()
 
         case "7":
