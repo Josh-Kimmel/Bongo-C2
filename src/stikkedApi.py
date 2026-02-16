@@ -14,11 +14,10 @@ def getUrl(path):
 def makePost(content, title=""):
     url = getUrl("/api/create")
     payload = {
-        "private": 1,
+        #"private": 1,
         "name": getSettingByName("server_username"),
         "title": title,
-        "text": str(content), 
-        "expire": 5 #delete while not testing
+        "text": str(content)
+        #"expire": 5 #delete while not testing
     }
-   
     return requests.post(url, payload)

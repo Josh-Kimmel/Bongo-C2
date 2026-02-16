@@ -72,6 +72,10 @@ def readConfig():
         print("Error: Unknown error in reading file " + configFileName + ".")
         exit
 
+def savePostInformation(list, postInfo):
+    config = readConfig()
+    config[list].append(postInfo)
+    writeConfig(config)
 
 #writes initialized values back to json server config file
 def writeConfig(configJson):

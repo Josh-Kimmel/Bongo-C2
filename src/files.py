@@ -34,7 +34,7 @@ def postFile():
         print("Error: Failed to read " + filePath)
 
     try:
-        response = makePost(fileContent)
+        response = makePost(fileContent, fileName)
     except:
         print("Error: Unable to connect to Stikked server.")
     
@@ -48,7 +48,7 @@ def postFile():
                 "id": response.text [-9:-1],
                 "comment": fileComment
             }
-            saveFileInformation(fileInfo)
+            savePostInformation("files", fileInfo)
     except:
         print("Error: Unable to process response.")
     
@@ -56,6 +56,3 @@ def postFile():
     
 
 
-def saveFileInformation(fileInfo):
-    config = readConfig()
-    config["files"].append(fileInfo)

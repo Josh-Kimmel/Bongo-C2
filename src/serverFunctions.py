@@ -59,7 +59,7 @@ def home(reminderText=""):
 
 
 def load():
-
+    clearScreen()
     splashScreen()
     
     config = readConfig()

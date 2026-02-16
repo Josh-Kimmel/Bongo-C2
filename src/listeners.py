@@ -21,7 +21,7 @@ def postListener():
     listenerComment = input("\nEnter comment on listener: ")
 
     try:
-        response = makePost("", listenerName)
+        response = makePost(listenerName, listenerName)
     except:
         print("Error: Unable to connect to Stikked server.")
 
@@ -35,13 +35,11 @@ def postListener():
                 "id": response.text [-9:-1],
                 "comment": listenerComment
             }
-            saveListenerInformation(listenerInfo)
+            savePostInformation("listeners", listenerInfo)
     except:
         print("Error: Unable to process response.")
 
-def saveListenerInformation(listenerInfo):
-    config = readConfig()
-    config["listeners"].append(listenerInfo)
+
 
 
 
