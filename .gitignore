@@ -1,0 +1,4 @@
+serverConfig.json
+.env
+extras/Payloads/*
+.venv/*
