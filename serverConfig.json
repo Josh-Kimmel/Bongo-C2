@@ -1,18 +1,1 @@
-{
-  "server_data":
-  {
-    "initialized": false, 
-    "stikked_address": "http://example.com/stikked", 
-    "server_username": "bongo"
-  },
-  
-  "listeners": 
-  [
-    
-  ], 
-  
-  "files": 
-  [
-    
-  ]
-}
+{"server_data": {"initialized": true, "stikked_address": "http://localhost/", "server_username": "kaden"}, "listeners": [{"name": "test", "url": "http://localhost/view/fac7706a", "id": "fac7706a", "comment": "this is my first listner "}, {"name": "mine", "url": "http://localhost/view/86782030", "id": "86782030", "comment": "init this"}, {"name": "grab", "url": "http://localhost/view/5fb155ac", "id": "5fb155ac", "comment": "this is a test to see the contents of the listner"}], "files": [{"name": "", "url": "Error: Missing paste text", "id": "ste text", "comment": ""}]}

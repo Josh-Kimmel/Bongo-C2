@@ -6,8 +6,18 @@ def getListenerById(targetId):
     for listener in listenerList:
         if(listener["id"] == targetId):
             return listener
-    
     return None
+
+
+def addReplyToListener(listener_id, reply_pid):
+    config = readConfig()
+    for listener in config["listeners"]:
+        if listener["id"] == listener_id:
+            if "replies" not in listener:
+                listener["replies"] = []
+            listener["replies"].append(reply_pid)
+            writeConfig(config)
+            return
 
 
 def getListeners():
