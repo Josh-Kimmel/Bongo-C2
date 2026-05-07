@@ -72,19 +72,21 @@ def homeScreen():
 
     homeText = """
     
-    #--------# Bongo #--------#
-    |                         |
-    | [0] - Initialize Server |
-    | [1] - View Settings     |
-    | [2] - View Listeners    |
-    | [3] - View Files        |
-    | [4] - Create Listener   |
-    | [5] - Post File         |
-    | [6] - Send Commands     |
-    | [7] - Delete Sessions   |
-    | [8] - Exit              |
-    |                         |
-    #-------------------------#
+    #---------# Bongo #---------#
+    |                           |
+    | [0]  - Initialize Server  |
+    | [1]  - View Settings      |
+    | [2]  - View Listeners     |
+    | [3]  - View Files         |
+    | [4]  - Create Listener    |
+    | [5]  - Post File          |
+    | [6]  - Send Commands      |
+    | [7]  - Delete Sessions    |
+    | [8]  - View Command Queue |
+    | [9]  - Generate Payload   |
+    | [10] - Exit               |
+    |                           |
+    #---------------------------#
 
     """
 
